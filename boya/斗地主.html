@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .menu{
+        background: #191d3a;
+        height: 60px;
+    }
+    .menu h1{
+        display: inline;
+        margin-left: 472px;
+        line-height: 50px;
+        margin-right: 20px;
+        vertical-align: bottom;
+    }
+    .menu a{
+        font-size: 14px;
+        color: gray;
+        line-height: 60px;
+        text-decoration: none;
+        display: inline-block;
+        padding:0px 30px;
+        border-right: 1px solid #252947;
+        margin-left: auto;
+    }
+    .menu a:hover{
+        color: whitesmoke;
+        background-color: #252947;
+    }
+    .menu a:nth-child(8){
+        color: aliceblue;
+        background-color: #38b774;
+        width: 60px;
+        height: 34px;
+        line-height: 34px;
+        border-radius:4px;
+    }
+    .menu a:nth-child(9){
+        color: #38b774;
+        border-right: 0;
+        padding-right: 5px;
+        margin-right: 0;
+        margin-left: 50px;
+        cursor: pointer;
+    }
+    .menu a:nth-child(9):hover{
+        background-color: #191d3a;   
+    }
+    .menu a:nth-child(10):hover{
+        background-color: #191d3a;
+        color: #38b774;
+    }
+    .menu a:nth-child(10){
+        border-right: 0;
+        padding-left: 0;
+        margin-left: 0;
+    }
+
+
+
+
+
+    .logo{
+        height: 460px;
+        background:url(images/banner.jpg) center top no-repeat #191d3a;
+        position: relative;
+    }
+    .logo .container{
+        position: relative;
+    }
+    .logo .inner_box{
+        width: 453px;
+        position: absolute;
+        right: 27%;
+        top: 82px;
+    }
+    .logo .inner_box .game{
+        width: 115px;
+        position: absolute;
+        right: 0;
+        cursor: pointer;
+    }
+    .logo .inner_box .game .online{
+        width: 115px;
+        height: 37px;
+        background:url(images/online.png);
+        line-height: 37px;
+        text-indent:16px;
+    }
+    .logo .inner_box .game:hover .online{
+        background:url(images/online.png) -120px 0;
+    }
+    .logo .inner_box .game:hover .bottom{
+        display:block;
+    }
+    .logo .inner_box .game .bottom{
+        height: 38px;
+        background: white;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: none;
+    }
+    .logo .inner_box .game .bottom a{
+        float: left;
+        margin-right: 8px;
+    }
+    .logo .inner_box .game .bottom a:nth-child(1){
+        background: url(images/online.png) no-repeat 0 bottom;
+        width: 25px;
+        height: 25px;
+        margin-left: 12px;
+    }
+    .logo .inner_box .game .bottom a:nth-child(2){
+        background: url(images/online.png) no-repeat -50px bottom;
+        width: 25px;
+        height: 25px;
+    }
+    .logo .inner_box .game .bottom a:nth-child(3){
+        background: url(images/online.png) no-repeat -100px bottom;
+        width: 25px;
+        height: 25px;
+    }
+    .logo .inner_box .world{
+        margin-top: 85px;
+    }
+    .logo .inner_box h2{
+        margin-top: 37px;
+        margin-bottom: 16px;
+        font-size:18px;
+        background:url(images/download.png) 7px 4px no-repeat;
+        text-indent:36px;
+    }
+    .logo .inner_box .icons ul li{
+        width: 83px;
+        height: 86px;
+        float: left;
+        background: rgba(255,255,255,0.6);
+        margin-right: 2px;
+        text-align: center;
+        padding-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.5s;
+        list-style-type: none;
+    }
+    .logo .inner_box .icons ul li:hover{
+        background: rgba(255,255,255,1);
+    }
+    .logo .inner_box .icons ul li:last-child{
+        width: 111px;
+        text-align: center;
+        height: 93px;
+        padding-top: 13px;
+    }
+    .logo .inner_box .icons ul li:last-child:hover{
+        background: rgba(255,255,255,0.6);
+    }
+    .logo .inner_box .icons .icon{
+        width: 42px;
+        height: 41px;
+        display: inline-block;
+        background:url(images/pad.png) no-repeat;
+        margin-bottom: 10px;
+    }
+    .logo .inner_box .icons ul li:nth-child(1) .icon{
+        background-position: 8px -199px;
+    }
+    .logo .inner_box .icons ul li:nth-child(2) .icon{
+        background-position: 6px 0;
+    }
+    .logo .inner_box .icons ul li:nth-child(3) .icon{
+        background-position: -4px -97px
+    }
+    .logo .inner_box .icons ul li:nth-child(4) .icon{
+        background-position: 0 -499px
+    }
+    .logo .dian{
+        width: 93px;
+        position: absolute;
+        left: 50%;
+        margin-left: -46px;
+        bottom: 20px;
+    }
+    .logo .dian ul li{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255,255,255,0.5);
+        float: left;
+        margin-right: 15px;
+        list-style-type: none;
+    }
+    .logo .dian ul li:last-child{
+        margin-right: 0;
+    }
+    .logo .dian ul li:nth-child(3){
+        background: white;
+    }
+
+
+
+    .bofang{
+        float: left;
+        border-bottom: gray solid 1px;
+        margin-bottom: 53px;
+        position: relative;
+    }
+
+    .bofang .quan{
+        width: 93px;
+        position: absolute;
+        left: 50%;
+        margin-left: -46px;
+        bottom: -8px;  
+    }
+    .bofang .quan ul li{
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.336);
+        float: left;
+        margin-right: 15px;
+        list-style-type: none;
+    }
+    .bofang .quan ul li:first-child{
+        margin-left: 18px;
+        background: green;
+    }
+    .bofang .quan ul li:last-child{
+        margin-left: 18px;
+        background: gray
+    }
+
+
+
+    .left{
+        background: url(images/bynewsbg.jpg) left;
+        width: 500px;
+        height: 310px;
+        float: left;
+        position: relative;
+    }
+    .more1{
+        border: #38b774 solid 1px;
+        border-radius: 10px;
+        width: 66px;
+        height: 26px;
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 220px;
+        color: #38b774;
+        font-size: 12px;
+        line-height: 26px;
+        text-align: center;
+    }
+    .xinwen{
+        padding-top: 110px;
+        display: inline-block;
+    }
+    .xinwen ul li{
+        margin-top: 10px;
+        font-size: 14px;
+        list-style-type: none;
+        text-indent: 2em;
+        border-bottom: 1px grey solid;
+        line-height: 40px;
+        height: 40px;
+        display: inline-block;
+
+    }
+
+
+    .right{
+        background:url(images/byshzpbg.jpg) right;
+        width: 500px;
+        height: 310px;
+        float: left;
+        position: relative;
+    }
+    .ping ul li:nth-child(1){
+        position: absolute;
+        padding-top: 30px;
+        padding-left: 80px;
+        color: white;
+        font-weight:bolder;
+        text-decoration: none;
+        font-size:33px;
+    }
+    .ping ul li:nth-child(2){
+        position: absolute;
+        padding-top: 70px;
+        padding-left: 80px;
+        color: white;
+        text-decoration: none;
+        font-size:13px;
+    }
+
+    .xiao ul li{
+        border-bottom: 1px solid white;
+        line-height: 12px;
+        color: white;
+        font-size: 16px;
+        line-height: 42px;
+        height: 42px;
+        list-style: none;
+    }
+    .xiao{
+        margin-top: 90px;
+        margin-left: 20px;
+        width: 300px;
+    }
+    .xiao ul li:nth-child(1){
+        font-weight: bolder;
+        border-bottom: 0px;
+        margin-bottom: -10px;
+    }
+
+
+    .more2{
+        border: white solid 1px;
+        border-radius: 10px;
+        width: 66px;
+        height: 26px;
+        position: absolute;
+        margin-top: 40px;
+        margin-left: 250px;
+        color: white;
+        font-size: 12px;
+        line-height: 26px;
+        text-align: center;
+    }
+    .mid{
+        margin-top: 50px;
+        margin-left: 553px;
+        width: 1030px;
+    }
+    .p1{
+        line-height: 20px;
+    }
+    .p2{
+        line-height: 30px;
+    }
+    .tu1{
+        width: 218px;
+        height: 190px;
+        display: inline-block;
+        margin-right: 45px;
+        text-align: center;
+    }
+    .tu2{
+        width: 218px;
+        height: 190px;
+        margin-right: 45px;
+        display: inline-block;
+
+        text-align: center;
+    }
+    .tu3{
+        width: 218px;
+        height: 190px;
+        margin-right: 45px;
+        display: inline-block;
+
+        text-align: center;
+    }
+    .tu4{
+        width: 218px;
+        height: 190px;
+        display: inline-block;
+        text-align: center;
+    }
+    .bofang .p1{
+        font-weight: bolder;
+        font-size: 16px;
+        color: black;
+    }
+    .bofang .p2{
+        font-size: 14px;
+        color: #38b774;
+    }
+    .tu1:hover{
+        background-color: #38b774;
+        color: white;
+    }
+    .tu2:hover{
+        background-color: #38b774;
+        color: white;
+    }
+    .tu3:hover{
+        background-color: #38b774;
+        color: white;
+    }
+    .tu4:hover{
+        background-color: #38b774;
+        color: white;
+    }
+    .p1:hover{
+        color: white;
+    }
+    .p2:hover{
+        color: white;
+    }
+
+
+
+    .dibu{
+        width: 100%;
+        height: 192px;
+        background-color: #191d3a;
+        margin-top: 650px;
+    }
+    .dibu li{
+        color:#6c6e7e;
+        padding-left: 550px;
+        font-size: 16px;
+        line-height: 42px;
+        padding-top: 10px;
+    }
+    .dibu .A:hover{
+        color: white;
+    }
+    .dibu .B:hover{
+        color: white;
+    }
+    .dibu .C:hover{
+        color: white;
+    }
+    .dibu li:nth-last-child(1){
+        margin-top: -45px;
+
+    }
+
+
+</style>
+<body>
+    <div class="box">
+        <div class="top">
+            <div class="menu">
+                <h1><img src="images/logo.png" width="157" height="35"></h1>
+                <a href="">首页</a>
+                <a href="">博雅游戏</a>
+                <a href="">博雅新闻</a>
+                <a href="">关于我们</a>
+                <a href="">客服中心</a>
+                <a href="">投资者关系</a>
+                <a href="">加入我们</a>
+                <a href="">中文</a>
+                <a href="">EN</a>
+            </div>
+
+            <div class="logo">
+                <div class="container">
+                    <div class="inner_box">
+            <div class="game">
+                <div class="online">在线游戏</div>
+
+            <div class="bottom">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+
+            </div>
+            </div>
+
+            <p class="world">风靡国内外的斗地主游戏，超低流量，玩法多样，居家旅行必备良品</p>
+            
+            <h2>下载游戏：</h2>
+
+            <div class="icons">
+                <ul>
+                    <li><span class="icon"></span><br/>iPad</li>
+                    <li><span class="icon"></span><br/>iPhone</li>
+                    <li><span class="icon"></span><br/>Android</li>
+                    <li><span class="icon"></span><br/>TV</li>
+                    <li><img src="images/ewm.png"/></li>
+                </ul>
+            </div>
+                    </div>
+                </div>
+
+                <div class="dian">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="mid">
+            <div class="bofang">
+                <div class="tu1"><img src="images/bd1.jpg" width="218" height="130">
+                <p class="p1">BPT宣传片</p>
+                <p class="p2">点击播放</p></div>
+                <div class="tu2"><img src="images/bd2.jpg" width="218" height="130">
+                <p class="p1">BPT宣传片</p>
+                <p class="p2">点击播放</p></div>
+                <div class="tu3"><img src="images/bd3.jpg" width="218" height="130">
+                <p class="p1">麻将全集</p>
+                <p class="p2">MAHJONG GAMES</p></div>
+                <div class="tu4"><img src="images/bd4.jpg" width="218" height="130">
+                <p class="p1">中国象棋</p>
+                <p class="p2">CHINESE CHESS OF BOYAA</p></div>
+                
+                <div class="quan">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+                
+                
+            </div>
+
+
+            <div class="news">
+                <div class="left">
+                    <div class="more1"><p>MORE+</p></div>
+                    <div class="xinwen">
+                    <ul>
+                    <li>博雅互动公布2018年第三季度业绩，善用成本费用控制政策，..11/22</li>
+                    <li>博雅互动公布2018年第三季度业绩，成本费用控制良好，股权..11/22</li>
+                    <li>博雅互动义工队中秋探访敬老院，带关爱走进夕阳生活09/25</li>
+                    <li>博雅互动公布2018年中期业绩，巩固现有市场地位，加大力度..08/23</li>
+                    </ul>
+                    </div>
+                </div>
+                
+                
+                <div class="right">
+                    <div class="more2"><p>MORE+</p></div>
+                <div class="ping">
+                <ul>
+                <li>社会招聘</li>
+                <li>BOYAA JOBS</li>
+                </ul>
+                </div>
+                <div class="xiao">
+                <ul>
+                <li>社会招聘岗位：</li>
+                <li>PHP开发工程师</li>
+                <li>C++开发工程师</li>
+                <li>LUA开发工程师</li>
+                <li>大数据开发工程师</li>
+                </ul>
+                </div>
+                </div>
+            
+                
+            </div>
+
+
+        </div>
+
+
+
+        <div class="dibu">
+        <ul>
+        <li><span class="A">网站地图</span>  |  <span class="B">免责声明</span>  |  <span class="C">监督举报</span></li>
+        <li>Copyright © 2004 - 2019 博雅互动(Boyaa Interactive)粤ICP备05062536号</li>
+        <li>网络文化经营许可证：粤网文[2015]1991-405号 | 互联网出版许可证：新出网证（粤）字062号 | 增值电信业务经营许可证：粤B2-20110513<img src="images/govIcon.gif" height="75" width="55"></li>
+        </ul>    
+        </div>
+    </div>
+    
+</body>
+</html>
